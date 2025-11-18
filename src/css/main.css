@@ -176,7 +176,7 @@
 }
 
 .filter-btn.active {
-  color: #f50c0c;
+  color: #ffffff;
 }
 
 .filter-btn.active::after {
@@ -186,11 +186,10 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #f50c0c;
 }
 
 .menu-icon:hover p {
-  width: 50px;
+  width: 30px;
   transition: all 0.3s ease;
 }
 
@@ -219,4 +218,10 @@
 .slider .social-links {
   position: relative;
   z-index: 10;
+}
+.about-us {
+  margin-top: -80px;
+}
+.contact {
+  margin-top: -80px;
 }

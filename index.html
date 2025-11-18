@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto px-4">
+    <div class="container-xl mx-auto px-10">
       <nav class="py-2">
         <div class="flex justify-between items-center h-30">
           <div class="logo z-100">
@@ -37,16 +37,16 @@
           </div>
           <div class="menu-icon cursor-pointer z-100">
             <button
-              class="menu-toggle menu-icon flex flex-col gap-2 justify-center cursor-pointer z-100"
+              class="menu-toggle menu-icon flex flex-col gap-1 justify-center cursor-pointer z-100"
             >
               <p
-                class="border-2 border-white w-[50px] h-[1px] z-100 border-t"
+                class="border-2 border-white w-[30px] h-[1px] z-100 border-t"
               ></p>
               <p
-                class="border-2 border-white w-[50px] h-[1px] z-100 border-n"
+                class="border-2 border-white w-[30px] h-[1px] z-100 border-n"
               ></p>
               <p
-                class="border-2 border-white w-[30px] h-[1px] z-100 border-h"
+                class="border-2 border-white w-[20px] h-[1px] z-100 border-h"
               ></p>
             </button>
           </div>
@@ -58,28 +58,35 @@
         <div
           class="full-menu hidden cursor-pointer absolute top-0 left-0 w-full h-screen bg-black z-50"
         >
-          <div class="flex items-center lg:w-[67%] bg-[#1F1F1F] h-full gap-10">
-            <div class="container mx-auto">
-              <div class="menu-list flex flex-col lg:ml-40 p-10">
-                <a
-                  href="#"
-                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
-                  >Home</a
-                >
-                <a
-                  href="index2.html"
-                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
-                  >About Us</a
-                >
-                <a
-                  href="#"
-                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
-                  >Contact</a
-                >
+          <div
+            class="flex items-center justify-between lg:w-full bg-[#1F1F1F] h-full"
+          >
+            <div class="w-full container mx-12">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:ml-20">
+                <div class="menu-list flex flex-col">
+                  <a
+                    href="#"
+                    class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                    >Home</a
+                  >
+                  <a
+                    href="index2.html"
+                    class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                    >About Us</a
+                  >
+                  <a
+                    href="#"
+                    class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                    >Contact</a
+                  >
+                </div>
+                <div class="hidden lg:flex flex-col items-start text-white gabarito-lumos text-right bg-black h-full absolute top-0 right-0 w-[32%] text-center justify-center p-10">
+                  <p class="text-[30px] text-[#ea0026]">Get In Touch</p>
+                  <p class="text-white text-[20px]"><a href="mailto:hi@yourdomain.com">hi@yourdomain.com</a></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       </nav>
       <!-- title -->
       <div
@@ -94,14 +101,14 @@
               >an <span class="text-[#F50C0C]">agency</span></span
             >
           </h1>
-          <p class="text-[#BFB8B8] text-[32px] inter-lumos">
+          <p class="text-[#BFB8B8] text-[20px] md:text-[32px] montserrat-lumos">
             We are <span id="animated-text" class="text-white"></span>
           </p>
         </div>
         <div
-          class="social-links flex flex-col items-center gap-2 mt-22 relative z-10"
+          class="social-links hidden md:flex flex-col items-center gap-2 mt-22 relative z-10"
         >
-          <p class="text-[#FFFAFA] inter-lumos text-[11px] rotate-90 mb-6">
+          <p class="text-[#FFFAFA] montserrat-lumos text-[11px] rotate-90 mb-6">
             social links
           </p>
           <div class="border border-[#BFB8B8] w-[1px] h-[76px] mb-2"></div>
@@ -111,10 +118,12 @@
         </div>
       </div>
 
-      <main class="mx-auto text-center relative" style="max-width: 1160px">
+      <main
+        class="mx-auto text-center relative mt-100 sm:max-w-[1600px] lg:max-w-[1350px] w-full"
+      >
         <div>
           <div
-            class="filters left-85 text-sm gap-6 lg:rotate-270 absolute lg:top-0 lg:left-30 lg:transform -translate-x-1/1 lg:mt-95 flex lg:mb-10 text-[#A8A8A8] transition-all duration-300"
+            class="filters text-[15px] left-80 top-0 text-lg gap-6 lg:rotate-270 absolute lg:top-0 lg:left-30 lg:transform -translate-x-1/1 lg:mt-50 flex lg:mb-10 text-[#A8A8A8] transition-all duration-300 text-bold"
           >
             <button
               data-filter="all"
@@ -142,7 +151,7 @@
             </button>
           </div>
           <div
-            class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 text-center h-auto mt-[300px]"
+            class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-15 text-center h-auto mt-[300px]"
           >
             <div class="card" data-category="branding">
               <div class="card-content">
@@ -220,11 +229,11 @@
         </div>
 
         <button
-          class="mt-6 active:scale-110 px-4 py-2 border border-[#F50C0C] text-white rounded-[20px] hover:bg-[#F50C0C] hover:text-white transition-all duration-300 mb-20 cursor-pointer hover:translate-x-1"
+          class="mt-6 gabarito-lumos active:scale-110 pl-10 pr-10 px-4 py-2 border border-[#F50C0C] text-white rounded-[20px] hover:bg-[#F50C0C] hover:text-white transition-all duration-300 mb-20 cursor-pointer hover:translate-x-1"
         >
           Load More
         </button>
-        <div class="mb-20 text-center mx-auto flex justify-center w-full">
+        <!-- <div class="mb-20 text-center mx-auto flex justify-center w-full">
           <p class="border-1 border-[#454545] w-[700px]"></p>
         </div>
         <div class="carusel-card mx-auto mb-20 w-[300px] md:w-[500px]">
@@ -262,7 +271,7 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </main>
     </div>
     <footer
@@ -295,12 +304,12 @@
         .addEventListener("click", () => {
           document.querySelector(".full-menu").classList.toggle("hidden");
           document.querySelector(".border-n").classList.toggle("hidden");
-          document.querySelector(".border-h").classList.toggle("w-[50px]");
-          document.querySelector(".border-h").classList.toggle("rotate-50");
+          document.querySelector(".border-h").classList.toggle("w-[30px]");
+          document.querySelector(".border-h").classList.toggle("rotate-40");
           document.querySelector(".border-h").classList.toggle("rotate-45");
           document
             .querySelector(".border-h")
-            .classList.toggle("translate-y-[-30px]");
+            .classList.toggle("translate-y-[-28px]");
 
           document.querySelector(".border-t").classList.toggle("rotate-140");
           document
@@ -348,44 +357,44 @@
         });
       });
 
-      const carouselButtons = document.querySelectorAll(".carousel-button");
-      let autoSwitchInterval;
+      // const carouselButtons = document.querySelectorAll(".carousel-button");
+      // let autoSwitchInterval;
 
-      function autoSwitch() {
-        currentIndex = (currentIndex + 1) % carouselTexts.length;
-        showCarousel(currentIndex);
-      }
+      // function autoSwitch() {
+      //   currentIndex = (currentIndex + 1) % carouselTexts.length;
+      //   showCarousel(currentIndex);
+      // }
 
-      function startAutoSwitch() {
-        autoSwitchInterval = setInterval(autoSwitch, 3000);
-      }
+      // function startAutoSwitch() {
+      //   autoSwitchInterval = setInterval(autoSwitch, 3000);
+      // }
 
-      function resetAutoSwitch() {
-        clearInterval(autoSwitchInterval);
-        startAutoSwitch();
-      }
+      // function resetAutoSwitch() {
+      //   clearInterval(autoSwitchInterval);
+      //   startAutoSwitch();
+      // }
 
-      startAutoSwitch();
-      const carouselTexts = document.querySelectorAll(".carousel-text");
-      let currentIndex = 0;
+      // startAutoSwitch();
+      // const carouselTexts = document.querySelectorAll(".carousel-text");
+      // let currentIndex = 0;
 
-      function showCarousel(index) {
-        carouselTexts.forEach((text, i) => {
-          text.classList.toggle("hidden", i !== index);
-        });
-        carouselButtons.forEach((btn, i) => {
-          btn.classList.toggle("text-[#F50C0C]", i === index);
-        });
-      }
+      // function showCarousel(index) {
+      //   carouselTexts.forEach((text, i) => {
+      //     text.classList.toggle("hidden", i !== index);
+      //   });
+      //   carouselButtons.forEach((btn, i) => {
+      //     btn.classList.toggle("text-[#F50C0C]", i === index);
+      //   });
+      // }
 
-      carouselButtons.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          currentIndex = index;
-          showCarousel(currentIndex);
-        });
-      });
+      // carouselButtons.forEach((btn, index) => {
+      //   btn.addEventListener("click", () => {
+      //     currentIndex = index;
+      //     showCarousel(currentIndex);
+      //   });
+      // });
 
-      showCarousel(0);
+      // showCarousel(0);
 
       const text = "Lumos Development";
       const element = document.getElementById("animated-text");
