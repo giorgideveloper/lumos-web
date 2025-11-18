@@ -81,7 +81,7 @@
           >
             <span class="font-bold text-[#F50C0C] lg:text-150">Conta</span>ct
           </h1>
-          <div class="border-1 border-[#BFB8B8] md:w-[60%] mx-auto mb-20"></div>
+          <div class="border-1 border-[#454545] md:w-[60%] mx-auto mb-20"></div>
           <div
             class="text-white text-sm inter-lumos leading-8 mb-20 text-center lg:text-[20px] lg:leading-10"
           >
@@ -109,28 +109,37 @@
               <input
                 type="text"
                 placeholder="Your Name"
-                class="flex-1 p-4 bg-[#1F1F1F] border border-[##FFFFFF] rounded-xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+                class="flex-1 p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                class="flex-1 p-4 bg-[#1F1F1F] border border-[##FFFFFF] rounded-xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+                class="flex-1 p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
               />
             </div>
             <textarea
-              rows="5"
+              rows="10"
               placeholder="Your Message"
-              class="p-4 bg-[#1F1F1F] border border-[##FFFFFF] rounded-xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+              class="p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
             ></textarea>
             <div class="flex justify-center">
               <button
                 type="submit"
-                class="bg-[#F50C0C] cursor-pointer w-full sm:w-[30%] text-white inter-lumos font-bold py-3 hover:bg-[#d40a0a] rounded-[50px] transition-all duration-300"
+                class="bg-white text-black cursor-pointer w-full sm:w-[30%] inter-lumos font-bold py-3 hover:bg-[#d40a0a] hover:text-white rounded-[50px] transition-all duration-300"
               >
                 Submit
               </button>
             </div>
           </form>
+          <div
+            class="border-1 border-[red] md:w-[50%] mx-auto mb-20 text-center mt-20 overkflow-hidden flex items-center justify-center"
+          >
+            <p
+              class="text-white montserrat-lumos whitespace-nowrap animate-marquee text-sm md:text-base p-2"
+            >
+              One or more fields have an error. Please check and try again.
+            </p>
+          </div>
         </div>
       </main>
     </div>
