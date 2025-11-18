@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Document</title>
+  </head>
+ 
+  <body class="bg-[#1F1F1F]" >
+    <div class="container mx-auto px-4 " >
+      <nav class="py-2" >
+        <div class="flex justify-between items-center h-30 ">
+          <div class="logo z-100">
+            <a href="index.html"
+              ><img
+                src="./src/images/logo.png"
+                class="w-[65.81px] h-[84px]"
+                alt=""
+            /></a>
+          </div>
+          <div class="menu-icon cursor-pointer z-100">
+            <button class="menu-toggle menu-icon  flex flex-col gap-2 justify-center cursor-pointer z-100 " >
+              <p class="border-2 border-white w-[50px] h-[1px] z-100 border-t "></p>
+              <p class="border-2 border-white w-[50px] h-[1px] z-100 border-n "></p>
+              <p class="border-2 border-white w-[30px] h-[1px] z-100 border-h "></p>
+            </button>
+          </div>
+        </div>
+         <!-- Particles Background for Slider Section -->
+     
+        <!-- open menu -->
+        
+         <div class="full-menu  hidden cursor-pointer absolute top-0 left-0 w-full h-screen bg-black z-50">
+          <div class="flex items-center lg:w-[67%] bg-[#1F1F1F] h-full gap-10">
+            <div class="container mx-auto">
+                    <div class="menu-list flex flex-col lg:ml-40 p-10 ">
+                      <a href="#" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">Home</a>
+                      <a href="#" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">About Us</a>
+                      <a href="#" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">Contact</a>
+                    </div>
+            </div>
+            
+         </div>
+       
+         </div>
+         
+      </nav>
+      <!-- title -->
+       <main>
+        <div class="about-us">
+            <h1 class="text-white text-[50px] lg:text-[160px] font-bold inter-lumos mb-10 text-center ">
+                <span class="font-bold text-[#F50C0C] lg:text-150">About</span> Us</h1>
+                <div class="border-1 border-[#BFB8B8] md:w-[60%] mx-auto mb-20"></div>
+            <p class="text-white text-sm inter-lumos leading-8 mb-20  lg:text-[24px] lg:leading-10">
+                Welcome to dwsign agency, where creativity meets innovation. We are a team of passionate designers and developers dedicated to crafting exceptional digital experiences. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur exercitationem asperiores quibusdam natus iusto hic quia fugiat facilis dolore quisquam sequi consectetur accusantium, possimus eveniet odio nisi officia ad?
+            </p>
+        </div>
+       </main>
+ 
+     
+    </div>
+     <footer class="footer-content text-center bg-black inter-lumos h-50 text-[14px] bottom-0 w-full mt-50">
+        <div
+          class="flex justify-center items-center h-50 py-6 text-[#BFB8B8]"
+        >
+          <p>© 2025 dwsign agency. All rights reserved.</p>
+        </div>
+
+    <script>
+      //menu toggle
+       document.querySelector('.menu-icon button').addEventListener('click', () => {
+              document.querySelector('.full-menu').classList.toggle('hidden');
+              document.querySelector('.border-n').classList.toggle('hidden');
+              document.querySelector('.border-h').classList.toggle('w-[50px]');
+              document.querySelector('.border-h').classList.toggle('rotate-50');
+              document.querySelector('.border-h').classList.toggle('rotate-45');
+              document.querySelector('.border-h').classList.toggle('translate-y-[-30px]');
+
+              document.querySelector('.border-t').classList.toggle('rotate-140');
+              document.querySelector('.border-t').classList.toggle('translate-y-[-20px]');
+
+            });
+     
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', './particles.json', function() {
+    console.log('callback - particles-js config loaded');
+  });
+</script>
+
+  </body>
+</html>
