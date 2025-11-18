@@ -14,11 +14,19 @@
     <link rel="stylesheet" href="./src/css/main.css" />
     <title>Lumos | Home</title>
   </head>
- 
-  <body class="bg-[#1F1F1F]" >
-    <div class="container mx-auto px-4 " >
-      <nav class="py-2" >
-        <div class="flex justify-between items-center h-30 ">
+
+  <body class="bg-[#1F1F1F]">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loader-content">
+        <img src="./src/images/logo.png" alt="Lumos Logo" class="loader-logo" />
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4">
+      <nav class="py-2">
+        <div class="flex justify-between items-center h-30">
           <div class="logo z-100">
             <a href="#"
               ><img
@@ -28,34 +36,55 @@
             /></a>
           </div>
           <div class="menu-icon cursor-pointer z-100">
-            <button class="menu-toggle menu-icon  flex flex-col gap-2 justify-center cursor-pointer z-100 " >
-              <p class="border-2 border-white w-[50px] h-[1px] z-100 border-t "></p>
-              <p class="border-2 border-white w-[50px] h-[1px] z-100 border-n "></p>
-              <p class="border-2 border-white w-[30px] h-[1px] z-100 border-h "></p>
+            <button
+              class="menu-toggle menu-icon flex flex-col gap-2 justify-center cursor-pointer z-100"
+            >
+              <p
+                class="border-2 border-white w-[50px] h-[1px] z-100 border-t"
+              ></p>
+              <p
+                class="border-2 border-white w-[50px] h-[1px] z-100 border-n"
+              ></p>
+              <p
+                class="border-2 border-white w-[30px] h-[1px] z-100 border-h"
+              ></p>
             </button>
           </div>
         </div>
-         <!-- Particles Background for Slider Section -->
+        <!-- Particles Background for Slider Section -->
         <div id="particles-js"></div>
         <!-- open menu -->
-        
-         <div class="full-menu  hidden cursor-pointer absolute top-0 left-0 w-full h-screen bg-black z-50">
+
+        <div
+          class="full-menu hidden cursor-pointer absolute top-0 left-0 w-full h-screen bg-black z-50"
+        >
           <div class="flex items-center lg:w-[67%] bg-[#1F1F1F] h-full gap-10">
             <div class="container mx-auto">
-                    <div class="menu-list flex flex-col lg:ml-40 p-10 ">
-                      <a href="#" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">Home</a>
-                      <a href="index2.html" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">About Us</a>
-                      <a href="#" class="text-white text-[40px] hover:text-[#F50C0C] transition-all  duration-300 font-bold">Contact</a>
-                    </div>
+              <div class="menu-list flex flex-col lg:ml-40 p-10">
+                <a
+                  href="#"
+                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                  >Home</a
+                >
+                <a
+                  href="index2.html"
+                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                  >About Us</a
+                >
+                <a
+                  href="#"
+                  class="text-white text-[40px] hover:text-[#F50C0C] transition-all duration-300 font-bold"
+                  >Contact</a
+                >
+              </div>
             </div>
-            
-         </div>
-       
-         </div>
-         
+          </div>
+        </div>
       </nav>
       <!-- title -->
-      <div class="slider flex justify-between items-center mt-10 w-full mb-50 relative ">
+      <div
+        class="slider flex justify-between items-center mt-10 w-full mb-50 relative"
+      >
         <div class="text mt-30 relative z-10">
           <h1
             class="text-[#FFFAFA] text-[50px] md:text-[90px] lg:text-[160px] leading-[1.0] font-bold mb-4 gabarito-lumos"
@@ -69,7 +98,9 @@
             We are <span id="animated-text" class="text-white"></span>
           </p>
         </div>
-        <div class="social-links flex flex-col items-center gap-2 mt-22 relative z-10">
+        <div
+          class="social-links flex flex-col items-center gap-2 mt-22 relative z-10"
+        >
           <p class="text-[#FFFAFA] inter-lumos text-[11px] rotate-90 mb-6">
             social links
           </p>
@@ -83,20 +114,32 @@
       <main class="mx-auto text-center relative" style="max-width: 1160px">
         <div>
           <div
-            class="filters left-85 text-sm gap-6  lg:rotate-270 absolute lg:top-0 lg:left-30 lg:transform -translate-x-1/1 lg:mt-95 flex lg:mb-10 text-[#A8A8A8] transition-all duration-300"
+            class="filters left-85 text-sm gap-6 lg:rotate-270 absolute lg:top-0 lg:left-30 lg:transform -translate-x-1/1 lg:mt-95 flex lg:mb-10 text-[#A8A8A8] transition-all duration-300"
           >
-            <button data-filter="all" class="filter-btn active hover:text-white transition-all duration-300"
-              >All Works</button
+            <button
+              data-filter="all"
+              class="filter-btn active hover:text-white transition-all duration-300"
             >
-            <button data-filter="branding" class="filter-btn hover:text-white transition-all duration-300"
-              >Branding</button
+              All Works
+            </button>
+            <button
+              data-filter="branding"
+              class="filter-btn hover:text-white transition-all duration-300"
             >
-            <button data-filter="digital" class="filter-btn hover:text-white transition-all duration-300"
-              >Digital</button
+              Branding
+            </button>
+            <button
+              data-filter="digital"
+              class="filter-btn hover:text-white transition-all duration-300"
             >
-            <button data-filter="photography" class="filter-btn hover:text-white transition-all duration-300"
-              >Photography</button
+              Digital
+            </button>
+            <button
+              data-filter="photography"
+              class="filter-btn hover:text-white transition-all duration-300"
             >
+              Photography
+            </button>
           </div>
           <div
             class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 text-center h-auto mt-[300px]"
@@ -184,7 +227,7 @@
         <div class="mb-20 text-center mx-auto flex justify-center w-full">
           <p class="border-1 border-[#454545] w-[700px]"></p>
         </div>
-        <div class="carusel-card mx-auto mb-20 w-[300px] md:w-[500px] ">
+        <div class="carusel-card mx-auto mb-20 w-[300px] md:w-[500px]">
           <div class="csrd-text text-center text-white mx-auto mb-20 px-4">
             <div class="carousel-card mx-auto flex justify-center">
               <p class="carousel-text" id="carousel-text ">
@@ -221,29 +264,49 @@
           </div>
         </div>
       </main>
-     
     </div>
-     <footer class="footer-content text-center bg-black inter-lumos h-50 text-[14px] ">
-        <div
-          class="flex justify-center items-center h-50 py-6 text-[#BFB8B8]"
-        >
-          <p>© 2025 dwsign agency. All rights reserved.</p>
-        </div>
-
+    <footer
+      class="footer-content text-center bg-black inter-lumos h-50 text-[14px]"
+    >
+      <div class="flex justify-center items-center h-50 py-6 text-[#BFB8B8]">
+        <p>© 2025 dwsign agency. All rights reserved.</p>
+      </div>
+    </footer>
     <script>
+      // Hide loading screen - only show on first load
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        if (sessionStorage.getItem("hasLoaded")) {
+          loadingScreen.style.display = "none";
+        } else {
+          setTimeout(() => {
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => {
+              loadingScreen.style.display = "none";
+              sessionStorage.setItem("hasLoaded", "true");
+            }, 500);
+          }, 2000);
+        }
+      });
+
       //menu toggle
-       document.querySelector('.menu-icon button').addEventListener('click', () => {
-              document.querySelector('.full-menu').classList.toggle('hidden');
-              document.querySelector('.border-n').classList.toggle('hidden');
-              document.querySelector('.border-h').classList.toggle('w-[50px]');
-              document.querySelector('.border-h').classList.toggle('rotate-50');
-              document.querySelector('.border-h').classList.toggle('rotate-45');
-              document.querySelector('.border-h').classList.toggle('translate-y-[-30px]');
+      document
+        .querySelector(".menu-icon button")
+        .addEventListener("click", () => {
+          document.querySelector(".full-menu").classList.toggle("hidden");
+          document.querySelector(".border-n").classList.toggle("hidden");
+          document.querySelector(".border-h").classList.toggle("w-[50px]");
+          document.querySelector(".border-h").classList.toggle("rotate-50");
+          document.querySelector(".border-h").classList.toggle("rotate-45");
+          document
+            .querySelector(".border-h")
+            .classList.toggle("translate-y-[-30px]");
 
-              document.querySelector('.border-t').classList.toggle('rotate-140');
-              document.querySelector('.border-t').classList.toggle('translate-y-[-20px]');
-
-            });
+          document.querySelector(".border-t").classList.toggle("rotate-140");
+          document
+            .querySelector(".border-t")
+            .classList.toggle("translate-y-[-20px]");
+        });
       // Filter functionality
       const filterBtns = document.querySelectorAll(".filter-btn");
       const cards = document.querySelectorAll(".card");
@@ -258,9 +321,9 @@
 
           // First, gather all cards to center
           cards.forEach((card) => {
-            card.style.transition = 'all 0.4s ease';
-            card.style.opacity = '0';
-            card.style.transform = 'scale(0.5) translate(0, 0)';
+            card.style.transition = "all 0.4s ease";
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.5) translate(0, 0)";
           });
 
           // Then filter and animate to new positions
@@ -268,13 +331,13 @@
             let visibleIndex = 0;
             cards.forEach((card) => {
               const category = card.getAttribute("data-category");
-              
+
               if (filter === "all" || category === filter) {
                 card.classList.remove("hidden");
                 // Animate to position with stagger
                 setTimeout(() => {
-                  card.style.opacity = '1';
-                  card.style.transform = 'scale(1) translate(0, 0)';
+                  card.style.opacity = "1";
+                  card.style.transform = "scale(1) translate(0, 0)";
                 }, visibleIndex * 100);
                 visibleIndex++;
               } else {
@@ -348,15 +411,13 @@
         }
       }
 
-  typeText();
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS.load('particles-js', './particles.json', function() {
-    console.log('callback - particles-js config loaded');
-  });
-</script>
-
+      typeText();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "./particles.json", function () {
+        console.log("callback - particles-js config loaded");
+      });
+    </script>
   </body>
 </html>
