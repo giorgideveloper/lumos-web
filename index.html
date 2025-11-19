@@ -40,15 +40,9 @@
               class="menu-toggle menu-icon flex flex-col gap-1 justify-center cursor-pointer z-100"
               aria-label="Hamburger menu"
             >
-              <p
-                class="border-2 border-white w-[30px] h-[1px] z-100 border-t"
-              ></p>
-              <p
-                class="border-2 border-white w-[30px] h-[1px] z-100 border-n"
-              ></p>
-              <p
-                class="border-2 border-white w-[20px] h-[1px] z-100 border-h"
-              ></p>
+              <p class="border-2 border-white w-[30px] h-px z-100 border-t"></p>
+              <p class="border-2 border-white w-[30px] h-px z-100 border-n"></p>
+              <p class="border-2 border-white w-5 h-px z-100 border-h"></p>
             </button>
           </div>
         </div>
@@ -82,7 +76,7 @@
                   >
                 </div>
                 <div
-                  class="hidden lg:flex flex-col items-start text-white gabarito-lumos text-right bg-black h-full absolute top-0 right-0 w-[32%] text-center justify-center p-10"
+                  class="hidden lg:flex flex-col items-start text-white gabarito-lumos text-right bg-black h-full absolute top-0 right-0 w-[32%] justify-center p-10"
                 >
                   <p class="text-[30px] text-[#EA0026]">Get In Touch</p>
                   <p class="text-white text-[20px]">
@@ -101,7 +95,7 @@
       >
         <div class="text mt-30 relative z-10">
           <h1
-            class="text-[#FFFAFA] text-[50px] md:text-[90px] lg:text-[160px] leading-[1.0] font-bold mb-4 gabarito-lumos"
+            class="text-[#FFFAFA] text-[50px] md:text-[90px] lg:text-[160px] leading-none font-bold mb-4 gabarito-lumos"
           >
             More of
             <span class="block"
@@ -118,7 +112,7 @@
           <p class="text-[#FFFAFA] montserrat-lumos text-[11px] rotate-90 mb-6">
             social links
           </p>
-          <div class="border border-[#BFB8B8] w-[1px] h-[76px] mb-2"></div>
+          <div class="border border-[#BFB8B8] w-px h-[76px] mb-2"></div>
 
           <a href="#" class="mb-2" aria-label="Facebook"
             ><img src="./src/images/fb.png" alt="Facebook logo"
@@ -130,7 +124,7 @@
       </div>
 
       <main
-        class="mx-auto text-center relative md:mt-100 md:mt-50 mt-30 sm:max-w-[1600px] lg:max-w-[1350px] w-full"
+        class="mx-auto text-center relative md:mt-50 mt-30 sm:max-w-[1600px] lg:max-w-[1350px] w-full"
       >
         <div>
           <div
@@ -171,10 +165,11 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card1.jpg"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2
-                      class="card-title md:flex-col montserrat-lumos text-[22px] font-[100]"
+                      class="card-title md:flex-col montserrat-lumos text-[22px] font-thin"
                     >
                       Brand Identity
                     </h2>
@@ -193,6 +188,7 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card2.png"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -210,6 +206,7 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card-3.jpg"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -225,6 +222,7 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card4.jpg"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -240,6 +238,7 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card-6.jpg"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flec-col">Brand Identity</h2>
@@ -255,6 +254,7 @@
                     class="rounded-[15px] h-auto"
                     src="./src/images/card/card7.jpg"
                     alt=""
+                    loading="lazy"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -539,9 +539,5 @@
         });
       });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
-      defer
-    ></script>
   </body>
 </html>

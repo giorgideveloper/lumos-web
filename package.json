@@ -1,0 +1,26 @@
+{
+  "name": "lumos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/input.css -o ./src/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgideveloper/lumos-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgideveloper/lumos-web/issues"
+  },
+  "homepage": "https://github.com/giorgideveloper/lumos-web#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
