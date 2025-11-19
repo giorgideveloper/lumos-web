@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./src/images/logo.png" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="description" content="lumos Development Agency" />
@@ -29,12 +28,11 @@
       <nav class="py-2">
         <div class="flex justify-between items-center h-30">
           <div class="logo z-100">
-            <a href="#"
+            <a href="#" aria-label="Lumos Studio logo"
               ><img
                 src="./src/images/logo.png"
                 class="w-[65.81px] h-[84px]"
                 alt="Lumos Logo"
-                aria-label="Hamburger menu"
             /></a>
           </div>
           <div class="menu-icon cursor-pointer z-100">
@@ -122,8 +120,12 @@
           </p>
           <div class="border border-[#BFB8B8] w-[1px] h-[76px] mb-2"></div>
 
-          <a href="#" class="mb-2"><img src="./src/images/fb.png" alt="" /></a>
-          <a href="#"><img src="./src/images/inst.png" alt="" /></a>
+          <a href="#" class="mb-2" aria-label="Facebook"
+            ><img src="./src/images/fb.png" alt="Facebook logo"
+          /></a>
+          <a href="#" class="mb-2" aria-label="Instagram"
+            ><img src="./src/images/inst.png" alt="Instagram logo"
+          /></a>
         </div>
       </div>
 
@@ -496,9 +498,50 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-      particlesJS.load("particles-js", "./particles.json", function () {
-        console.log("callback - particles-js config loaded");
+      document.addEventListener("DOMContentLoaded", () => {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 150, density: { enable: true, value_area: 800 } },
+            color: { value: "#454545" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 2, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#7f7f7f",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+            },
+          },
+          retina_detect: true,
+        });
       });
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+      defer
+    ></script>
   </body>
 </html>
