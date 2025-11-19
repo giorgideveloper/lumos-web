@@ -257,3 +257,8 @@
 .contact {
   margin-top: -80px;
 }
+@media (max-width: 468px) {
+  .particles-js-canvas-el {
+    height: 700px !important;
+  }
+}
