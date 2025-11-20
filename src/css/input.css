@@ -1,28 +1,41 @@
 @import "tailwindcss";
 
 /* Custom Font Families */
-.gabarito-lumos {
-  font-family: "Gabarito", sans-serif;
-  font-optical-sizing: auto;
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("../fonts/Gabarito/static/Gabarito-Bold.ttf") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  font-optical-sizing: auto;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/static/Inter_18pt-Medium.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/static/Montserrat-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+.gabarito-lumos {
+  font-family: "Gabarito", sans-serif;
 }
 
 .inter-lumos {
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
 .montserrat-lumos {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
 }
 
 /* Loading Screen Styles */
