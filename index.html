@@ -16,21 +16,13 @@
   </head>
 
   <body class="bg-[#1F1F1F]">
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-      <div class="loader-content">
-        <img src="./src/images/logo.png" alt="Lumos Logo" class="loader-logo" />
-        <div class="spinner"></div>
-      </div>
-    </div>
-
     <div class="container-xl mx-auto px-10">
       <nav class="py-2">
         <div class="flex justify-between items-center h-30">
           <div class="logo z-100">
             <a href="#" aria-label="Lumos Studio logo"
               ><img
-                src="./src/images/logo.png"
+                src="./src/images/logo-svg.svg"
                 class="w-[65.81px] h-[84px]"
                 alt="Lumos Logo"
             /></a>
@@ -91,7 +83,7 @@
 
       <!-- title -->
       <div
-        class="slider flex justify-between items-center mt-0 w-full md:mb-50 relative"
+        class="slider flex justify-between items-center mt-0 w-full md:mb-100 relative"
       >
         <div class="text mt-30 relative z-10">
           <h1
@@ -124,7 +116,7 @@
       </div>
 
       <main
-        class="mx-auto text-center relative md:mt-50 mt-30 sm:max-w-[1600px] lg:max-w-[1350px] w-full"
+        class="mx-auto text-center relative md:mt-50 mt-30 sm:max-w-[1600px] lg:max-w-[1350px] w-full mb-50"
       >
         <div>
           <div
@@ -166,6 +158,8 @@
                     src="./src/images/card/card1.jpg"
                     alt=""
                     loading="lazy"
+                    width="434"
+                    height="290"
                   />
                   <div class="card-overlay">
                     <h2
@@ -181,7 +175,7 @@
               </div>
             </a>
 
-            <a href="" class="filter-card" data-category="digital">
+            <!-- <a href="" class="filter-card" data-category="digital">
               <div class="card" data-category="digital">
                 <div class="card-content">
                   <img
@@ -189,6 +183,8 @@
                     src="./src/images/card/card2.png"
                     alt=""
                     loading="lazy"
+                    width="434"
+                    height="290"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -198,7 +194,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </a> -->
             <a href="" class="filter-card" data-category="photography">
               <div class="card" data-category="photography">
                 <div class="card-content">
@@ -207,6 +203,8 @@
                     src="./src/images/card/card-3.jpg"
                     alt=""
                     loading="lazy"
+                    width="434"
+                    height="290"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -223,6 +221,8 @@
                     src="./src/images/card/card4.jpg"
                     alt=""
                     loading="lazy"
+                    width="434"
+                    height="290"
                   />
                   <div class="card-overlay">
                     <h2 class="card-title md:flex-col">Brand Identity</h2>
@@ -265,12 +265,12 @@
             </a>
           </div>
         </div>
-
+        <!-- 
         <button
           class="mt-6 gabarito-lumos active:scale-110 pl-10 pr-10 px-4 py-2 border border-[#EA0026] text-white rounded-[20px] hover:bg-[#EA0026] hover:text-white transition-all duration-300 mb-20 cursor-pointer hover:translate-x-1"
         >
           Load More
-        </button>
+        </button> -->
 
         <!-- <div class="mb-20 text-center mx-auto flex justify-center w-full">
           <p class="border-1 border-[#454545] w-[700px]"></p>
@@ -321,22 +321,6 @@
       </div>
     </footer>
     <script>
-      // Hide loading screen - only show on first load
-      window.addEventListener("load", function () {
-        const loadingScreen = document.getElementById("loading-screen");
-        if (sessionStorage.getItem("hasLoaded")) {
-          loadingScreen.style.display = "none";
-        } else {
-          setTimeout(() => {
-            loadingScreen.style.opacity = "0";
-            setTimeout(() => {
-              loadingScreen.style.display = "none";
-              sessionStorage.setItem("hasLoaded", "true");
-            }, 500);
-          }, 2000);
-        }
-      });
-
       //menu toggle
       document
         .querySelector(".menu-icon button")
