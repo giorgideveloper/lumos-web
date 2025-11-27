@@ -111,6 +111,7 @@
           <form
             action="#"
             class="flex flex-col gap-6 lg:w-[50%] mx-auto relative z-20"
+            onsubmit=""
           >
             <div class="flex flex-col lg:flex-row gap-6">
               <input
@@ -149,6 +150,27 @@
             >
               One or more fields have an error. Please check and try
             </p>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div
+          class="modal fixed inset-0 bg-black bg-opacity-50 z-100 flex items-center justify-center hidden"
+          id="error-modal"
+        >
+          <div
+            class="modal-content bg-[#1F1F1F] p-6 rounded-lg mx-auto mt-20 w-[80%] md:w-[50%] lg:w-[30%] text-center"
+          >
+            <h2 class="text-white text-3xl font-bold mb-4">Success</h2>
+            <p class="text-white mb-4 text-xl">
+              Your message successfully sent
+            </p>
+            <button
+              class="bg-[#EA0026] text-white text-right py-2 px-4 rounded cursor-pointer hover:bg-red-700 t"
+              onclick="document.getElementById('error-modal').classList.add('hidden')"
+            >
+              Close
+            </button>
           </div>
         </div>
       </main>
@@ -220,6 +242,11 @@
           },
           retina_detect: true,
         });
+      });
+
+      addEventListener("submit", (event) => {
+        event.preventDefault();
+        document.getElementById("error-modal").classList.remove("hidden");
       });
     </script>
   </body>
