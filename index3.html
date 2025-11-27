@@ -117,17 +117,20 @@
                 type="text"
                 placeholder="Your Name"
                 class="flex-1 p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+                required
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 class="flex-1 p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+                required
               />
             </div>
             <textarea
               rows="10"
               placeholder="Your Message"
               class="p-4 bg-[#1F1F1F] border-3 border-[##FFFFFF] rounded-4xl text-white inter-lumos focus:outline-none focus:border-[#d40a0a]"
+              required
             ></textarea>
             <div class="flex justify-center">
               <button
@@ -139,10 +142,10 @@
             </div>
           </form>
           <div
-            class="border border-[#EA0026] mx-auto mb-20 text-center mt-20 overkflow-hidden flex items-center justify-center w-fit"
+            class="border checke-inputs border-[#EA0026] lg:w-[50%] mx-auto mb-20 w-full text-center mt-20 overflow-hidden flex items-center justify-center"
           >
             <p
-              class="text-white montserrat-lumos whitespace-nowrap animate-marquee text-sm md:text-base px-11 py-2"
+              class="text-white montserrat-lumos animate-marquee text-sm md:text-base px-11 py-2 w-full container"
             >
               One or more fields have an error. Please check and try
             </p>

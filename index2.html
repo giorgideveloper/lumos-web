@@ -143,11 +143,15 @@
         <div class="carusel">
           <div class="carusel-card mx-auto w-full max-w-6xl">
             <div class="csrd-text text-center text-white mx-auto px-4">
-              <div class="carousel-container mx-auto overflow-hidden">
+              <div
+                class="carousel-container mx-auto overflow-hidden relative touch-pan-y select-none"
+              >
                 <div
-                  class="carousel-track flex gap-4 transition-transform duration-500"
+                  class="carousel-track flex transition-transform duration-500 ease-out"
                 >
-                  <div class="carousel-text flex-shrink-0 w-full md:w-1/3 px-2">
+                  <div
+                    class="carousel-text flex-shrink-0 w-full md:w-1/3 px-4 md:px-2"
+                  >
                     <div class="carousel-image w-full flex justify-center mb-4">
                       <img
                         src="./src/images/computer-graphic.png"
@@ -173,7 +177,9 @@
                       he found transformed in his bed into.
                     </p>
                   </div>
-                  <div class="carousel-text flex-shrink-0 w-full md:w-1/3 px-2">
+                  <div
+                    class="carousel-text flex-shrink-0 w-full md:w-1/3 px-4 md:px-2"
+                  >
                     <div class="carousel-image w-full flex justify-center mb-4">
                       <img
                         src="./src/images/creative-thinking.png"
@@ -199,7 +205,9 @@
                       he found transformed in his bed into.
                     </p>
                   </div>
-                  <div class="carousel-text flex-shrink-0 w-full md:w-1/3 px-2">
+                  <div
+                    class="carousel-text flex-shrink-0 w-full md:w-1/3 px-4 md:px-2"
+                  >
                     <div class="carousel-image w-full flex justify-center mb-4">
                       <img
                         src="./src/images/pen-tool.png"
@@ -225,7 +233,9 @@
                       he found transformed in his bed into.
                     </p>
                   </div>
-                  <div class="carousel-text flex-shrink-0 w-full md:w-1/3 px-2">
+                  <div
+                    class="carousel-text flex-shrink-0 w-full md:w-1/3 px-4 md:px-2"
+                  >
                     <div class="carousel-image w-full flex justify-center mb-4">
                       <img
                         src="./src/images/stationery.png"
@@ -264,6 +274,18 @@
                 <button
                   class="carousel-button text-[80px] hover:text-[#F50C0C] transition-all duration-300 cursor-pointer active:scale-110"
                   data-index="1"
+                >
+                  .
+                </button>
+                <button
+                  class="carousel-button text-[80px] hover:text-[#F50C0C] transition-all duration-300 cursor-pointer active:scale-110"
+                  data-index="2"
+                >
+                  .
+                </button>
+                <button
+                  class="carousel-button text-[80px] hover:text-[#F50C0C] transition-all duration-300 cursor-pointer active:scale-110"
+                  data-index="3"
                 >
                   .
                 </button>
@@ -349,14 +371,27 @@
         const buttons = document.querySelectorAll(".carousel-button");
         const items = document.querySelectorAll(".carousel-text");
         let currentIndex = 0;
-        const itemsPerView = window.innerWidth >= 768 ? 3 : 1; // Show 3 on desktop, 1 on mobile
+        let autoplayInterval;
+
+        // Determine items per view based on screen width
+        function getItemsPerView() {
+          return window.innerWidth >= 768 ? 3 : 1;
+        }
+
         const totalItems = items.length;
-        const maxIndex = Math.max(0, totalItems - itemsPerView);
+
+        function getMaxIndex() {
+          return Math.max(0, totalItems - getItemsPerView());
+        }
 
         function updateCarousel() {
-          const percentage = -(currentIndex * (100 / itemsPerView));
-          track.style.transform = `translateX(${percentage}%)`;
+          const itemsPerView = getItemsPerView();
+          const itemWidth = 100 / itemsPerView;
+          const offset = currentIndex * itemWidth;
 
+          track.style.transform = `translateX(-${offset}%)`;
+
+          // Update button colors
           buttons.forEach((btn, idx) => {
             if (idx === currentIndex) {
               btn.style.color = "#F50C0C";
@@ -366,25 +401,102 @@
           });
         }
 
-        buttons.forEach((button, index) => {
-          button.addEventListener("click", () => {
-            currentIndex = index;
-            if (currentIndex > maxIndex) {
-              currentIndex = 0;
+        // Prevent default drag behavior
+        track.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+        });
+
+        // Touch/Swipe functionality
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+        const swipeThreshold = 50; // Minimum distance for swipe
+
+        const carouselContainer = document.querySelector(".carousel-container");
+
+        carouselContainer.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+          },
+          { passive: true }
+        );
+
+        carouselContainer.addEventListener(
+          "touchend",
+          (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+          },
+          { passive: true }
+        );
+
+        function handleSwipe() {
+          const deltaX = touchEndX - touchStartX;
+          const deltaY = touchEndY - touchStartY;
+
+          // Only trigger swipe if horizontal movement is greater than vertical
+          if (
+            Math.abs(deltaX) > Math.abs(deltaY) &&
+            Math.abs(deltaX) > swipeThreshold
+          ) {
+            if (deltaX > 0) {
+              // Swipe right - go to previous
+              if (currentIndex > 0) {
+                currentIndex--;
+              } else {
+                currentIndex = getMaxIndex(); // Loop to end
+              }
+            } else {
+              // Swipe left - go to next
+              if (currentIndex < getMaxIndex()) {
+                currentIndex++;
+              } else {
+                currentIndex = 0; // Loop to start
+              }
             }
             updateCarousel();
+
+            // Reset autoplay
+            clearInterval(autoplayInterval);
+            startAutoplay();
+          }
+        }
+
+        buttons.forEach((button, index) => {
+          button.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            currentIndex = Math.min(index, getMaxIndex());
+            updateCarousel();
+
+            // Reset autoplay
+            clearInterval(autoplayInterval);
+            startAutoplay();
           });
         });
 
-        setInterval(() => {
-          currentIndex++;
-          if (currentIndex > maxIndex) {
-            currentIndex = 0;
-          }
+        function startAutoplay() {
+          autoplayInterval = setInterval(() => {
+            currentIndex++;
+            if (currentIndex > getMaxIndex()) {
+              currentIndex = 0;
+            }
+            updateCarousel();
+          }, 3000);
+        }
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+          currentIndex = Math.min(currentIndex, getMaxIndex());
           updateCarousel();
-        }, 3000);
+        });
 
         updateCarousel();
+        startAutoplay();
       });
     </script>
   </body>
